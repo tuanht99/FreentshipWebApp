@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
 
 export default function App() {
+  const [count, setCount] = useState(0);
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Hello, my name is Khanh.</Text>
+      <Text>You clicked {count} times.</Text>
       <StatusBar style="auto" />
     </View>
   );
