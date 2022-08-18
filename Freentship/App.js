@@ -3,7 +3,7 @@ import { deleteDoc, doc, getDoc, setDoc } from 'firebase/firestore';
 import { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 // Using DB Reference
-import { db } from './core/config'
+import { db } from './Core/Config'
 
 export default function App() {
 
@@ -118,16 +118,6 @@ export default function App() {
         }, true)
       }} disabled={text == ""}></Button>
       <Button title='Delete Doc' onPress={Delete}></Button>
-import { StyleSheet, Text, View } from 'react-native';
-import { useState } from 'react';
-
-export default function App() {
-  const [count, setCount] = useState(0);
-  return (
-    <View style={styles.container}>
-      <Text>Hello, my name is Khanh.</Text>
-      <Text>You clicked {count} times.</Text>
-      <StatusBar style="auto" />
     </View>
   );
 }
