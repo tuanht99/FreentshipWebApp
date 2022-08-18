@@ -118,6 +118,16 @@ export default function App() {
         }, true)
       }} disabled={text == ""}></Button>
       <Button title='Delete Doc' onPress={Delete}></Button>
+import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+
+export default function App() {
+  const [count, setCount] = useState(0);
+  return (
+    <View style={styles.container}>
+      <Text>Hello, my name is Khanh.</Text>
+      <Text>You clicked {count} times.</Text>
+      <StatusBar style="auto" />
     </View>
   );
 }
