@@ -3,7 +3,7 @@ import { deleteDoc, doc, getDoc, setDoc } from 'firebase/firestore';
 import { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 // Using DB Reference
-import { db } from './Core/Config'
+import { db } from './core/config'
 
 export default function App() {
 
