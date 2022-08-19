@@ -13,4 +13,4 @@ package-lock.json
 yarn.lock
 # macOS
 .DS_Store
-./Freentship/thanh.txt
+Freentship/thanh.txt
