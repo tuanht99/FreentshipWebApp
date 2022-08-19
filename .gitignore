@@ -1,4 +1,4 @@
-Freentship/node_modules/
+/node_modules/
 .expo/
 dist/
 npm-debug.*
@@ -13,4 +13,4 @@ package-lock.json
 yarn.lock
 # macOS
 .DS_Store
-./Freentship/thanh.txt
+./thanh.txt
