@@ -1,132 +1,373 @@
-import { StatusBar } from 'expo-status-bar';
-import { deleteDoc, doc, getDoc, setDoc } from 'firebase/firestore';
-import { useState } from 'react';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
-// Using DB Reference
-import { db } from './core/config'
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  ImageBackground,
+  Image,
+} from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import Feather from "react-native-vector-icons/Feather";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import TextImage from "./components/textImage";
+import Products from "./components/products";
 
-export default function App() {
+function HomeScreen() {
+  const data1 = [
+    {
+      nameImage: "food.png",
+      text: "Cơm gà 1",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 1,
+    },
+    {
+      nameImage: "food.png",
+      text: "Cơm gà 2",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 2,
+    },
+    {
+      nameImage: "food.png",
+      text: "Cơm gà 3",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 3,
+    },
+    {
+      nameImage: "food.png",
+      text: "Cơm gà 4",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 4,
+    },
+    {
+      nameImage: "food.png",
+      text: "Cơm gà 5",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 5,
+    },
+  ];
+  const data2 = [
+    {
+      nameImage: "monAn1.png",
+      text: "Cơm gà 1",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 1,
+    },
+    {
+      nameImage: "monAn1.png",
+      text: "Cơm gà 2",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 2,
+    },
+    {
+      nameImage: "monAn1.png",
+      text: "Cơm gà 3",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 3,
+    },
+    {
+      nameImage: "monAn1.png",
+      text: "Cơm gà 4",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 4,
+    },
+    {
+      nameImage: "monAn1.png",
+      text: "Cơm gà 5",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 5,
+    },
+  ];
+  const data3 = [
+    {
+      nameImage: "food.png",
+      text: "Cơm gà 1",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 1,
+    },
+    {
+      nameImage: "food.png",
+      text: "Cơm gà 2",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 2,
+    },
+    {
+      nameImage: "food.png",
+      text: "Cơm gà 3",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 3,
+    },
+    {
+      nameImage: "food.png",
+      text: "Cơm gà 4",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 4,
+    },
+    {
+      nameImage: "food.png",
+      text: "Cơm gà 5",
+      numberAddress: "1.5",
+      discount: "10",
+      id: 5,
+    },
+  ];
 
-  // Storing User Data
-  const [userDoc, setUserDoc] = useState(null)
-  // Update Text
-  const [text, setText] = useState("")
+  const HomeTab = createBottomTabNavigator();
 
-  // MARK: CRUD Functions
-  const Create = () => {
-    // MARK: Creating New Doc in Firebase
-    // Before that enable Firebase in Firebase Console
-    const myDoc = doc(db, "MyCollection", "MyDocument")
-
-    // Your Document Goes Here
-    const docData = {
-      "name": "iJustine",
-      "bio": "YouTuber"
-    }
-
-    setDoc(myDoc, docData)
-      // Handling Promises
-      .then(() => {
-        // MARK: Success
-        alert("Document Created!")
-      })
-      .catch((error) => {
-        // MARK: Failure
-        alert(error.message)
-      })
+  function NotificationsScreen() {
+    return (
+      <View style={styles.container}>
+        <Text>Notifications Screen</Text>
+      </View>
+    );
+  }
+  function ProfileScreen() {
+    return (
+      <View style={styles.container}>
+        <Text>Profile Screen</Text>
+      </View>
+    );
   }
 
-  const Read = () => {
-    // MARK: Reading Doc
-    // You can read what ever document by changing the collection and document path here
-    const myDoc = doc(db, "MyCollection", "MyDocument")
-
-    getDoc(myDoc)
-      // Handling Promises
-      .then((snapshot) => {
-        // MARK: Success
-        if (snapshot.exists) {
-          setUserDoc(snapshot.data())
-        }
-        else {
-          alert("No Doc Found")
-        }
-      })
-      .catch((error) => {
-        // MARK: Failure
-        alert(error.message)
-      })
-
-  }
-
-  const Update = (value, merge) => {
-    // MARK: Updating Doc
-    const myDoc = doc(db, "MyCollection", "MyDocument")
-
-    // If you set merge true then it will merge with existing doc otherwise it will be a fresh one
-    setDoc(myDoc, value, { merge: merge })
-      // Handling Promises
-      .then(() => {
-        // MARK: Success
-        alert("Updated Successfully!")
-        setText("")
-      })
-      .catch((error) => {
-        // MARK: Failure
-        alert(error.message)
-      })
-  }
-
-  const Delete = () => {
-    // MARK: Deleting Doc
-    const myDoc = doc(db, "MyCollection", "MyDocument")
-
-    deleteDoc(myDoc)
-      // Handling Promises
-      .then(() => {
-        // MARK: Success
-        alert("Deleted Successfully!")
-      })
-      .catch((error) => {
-        // MARK: Failure
-        alert(error.message)
-      })
-
+  function Home({ navigation }) {
+    return (
+      <ScrollView contentContainerStyle={{ backgroundColor: "#ddd" }}>
+        <View style={{ height: 130 }}>
+          <ImageBackground
+            source={require("./assets/backgroundHome.png")}
+            style={{ height: 130 }}
+          >
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "center",
+                marginTop: 24,
+              }}
+            >
+              <View
+                style={{
+                  flexDirection: "row",
+                  padding: 8,
+                  backgroundColor: "#767676",
+                  opacity: 0.8,
+                  borderRadius: 25,
+                }}
+              >
+                <Ionicons
+                  name="location"
+                  size={24}
+                  color="#E94730"
+                  style={{ marginEnd: 4 }}
+                />
+                <Text style={{ marginTop: 4, color: "#eee" }}>
+                  53 đường võ văn ngân, linh chiểu, thủ đức, t...
+                </Text>
+                <MaterialIcons name="navigate-next" size={30} color="#FEFEFE" />
+              </View>
+            </View>
+          </ImageBackground>
+        </View>
+        <View
+          style={{
+            height: 325,
+            backgroundColor: "#eee",
+            paddingHorizontal: 14,
+          }}
+        >
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              marginTop: 18,
+            }}
+          >
+            <View
+              style={{
+                flexDirection: "row",
+                backgroundColor: "#fefefe",
+                paddingVertical: 5,
+                paddingLeft: 3,
+                paddingRight: 43,
+                borderRadius: 30,
+              }}
+            >
+              <Image
+                source={require("./assets/avatar.jpg")}
+                style={{
+                  height: 40,
+                  width: 40,
+                  borderRadius: 25,
+                  borderWidth: 1,
+                  borderColor: "#ccc",
+                }}
+              />
+              <Text
+                style={{
+                  fontSize: 22,
+                  fontWeight: 800,
+                  marginTop: 6,
+                  marginStart: 8,
+                }}
+              >
+                Chào buổi tối, Khanh
+              </Text>
+            </View>
+          </View>
+          <View style={{ marginTop: 20 }}>
+            <View style={{ flexDirection: "row" }}>
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Giao đồ ăn"
+              />
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Gọi xe"
+              />
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Đi chợ"
+              />
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Giao hàng"
+              />
+            </View>
+            <View style={{ flexDirection: "row", marginTop: 12 }}>
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Siêu thị LoX"
+              />
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Mua mỹ phẩm"
+              />
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Giặt ủi"
+              />
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Mua thuốc"
+              />
+            </View>
+            <View style={{ flexDirection: "row", marginTop: 12 }}>
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Shopping"
+              />
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Chăm thú cưng"
+              />
+              <TextImage
+                navigation={navigation}
+                nameImage="food.png"
+                text="Giao hoa"
+              />
+              <TextImage navigation={navigation} nameImage="" text="" />
+            </View>
+          </View>
+        </View>
+        <View style={{ marginBottom: 24 }}>
+          <Products title="thử quán mới" data={data1} />
+          <Products title="đang khuyến mãi" data={data2} />
+          <Products title="thương hiệu quen thuộc" data={data3} />
+        </View>
+      </ScrollView>
+    );
   }
 
   return (
+    <HomeTab.Navigator
+      screenOptions={{
+        tabBarShowLabel: false,
+        headerShown: false,
+      }}
+    >
+      <HomeTab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home-outline" color={color} size={size} />
+          ),
+        }}
+      />
+      <HomeTab.Screen
+        name="Notifications"
+        component={NotificationsScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Feather name="bell" color={color} size={size} />
+          ),
+        }}
+      />
+      <HomeTab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Feather name="user" color={color} size={size} />
+          ),
+        }}
+      />
+    </HomeTab.Navigator>
+  );
+}
+function FoodScreen({ navigation, route }) {
+  const { text } = route.params;
+  return (
     <View style={styles.container}>
-      <Button title='Create New Doc' onPress={Create}></Button>
-      <Button title='Read Doc' onPress={Read}></Button>
-      {
-        userDoc != null &&
-        <Text>Bio: {userDoc.bio}</Text>
-      }
-      <TextInput style={{
-        width: '95%',
-        fontSize: 18,
-        padding: 12,
-        borderColor: 'gray',
-        borderWidth: 0.2,
-        borderRadius: 10,
-        marginVertical: 20
-      }} placeholder='Type Here' onChangeText={(text) => { setText(text) }} value={text}></TextInput>
-
-      <Button title='Update Doc' onPress={() => {
-        Update({
-          "bio": text
-        }, true)
-      }} disabled={text == ""}></Button>
-      <Button title='Delete Doc' onPress={Delete}></Button>
+      <Text>{text}</Text>
     </View>
+  );
+}
+const Stack = createStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Food" component={FoodScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#DDD",
   },
 });
