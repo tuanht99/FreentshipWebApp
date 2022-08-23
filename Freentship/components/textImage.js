@@ -11,7 +11,7 @@ function TextImage(props) {
           }
         >
           <Image
-            source={require("../assets/" + props.nameImage)}
+            source={require("../assets/food.png")}
             style={{ height: 40, width: 40 }}
           />
           <Text style={{ textAlign: "center" }}>{props.text}</Text>

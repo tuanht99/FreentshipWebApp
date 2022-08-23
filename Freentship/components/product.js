@@ -6,9 +6,10 @@ function Product(props) {
     <View style={{ borderWidth: 1, borderColor: '#d9d9d9', borderRadius: 8, marginStart: 14 }}>
       {props.nameImage !== '' ? (
         <View>
-          <Image source={require('../assets/' + props.nameImage)} style={{ height: 140, width: 133, borderTopLeftRadius: 8, borderTopRightRadius: 8 }} />
+          <Image source={{ url: props.nameImage }}
+            style={{ height: 140, width: 133, borderTopLeftRadius: 8, borderTopRightRadius: 8 }} />
           <View style={{ paddingHorizontal: 4, paddingBottom: 8 }}>
-            <Text style={{ fontSize: 18, fontWeight: 700 }}>{props.text}</Text>
+            <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{props.text}</Text>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
               <Image source={require('../assets/qc.png')} style={{ height: 20, width: 20 }} />
               <Ionicon name="location" size={20} color="#E94730" style={{ marginHorizontal: 4 }} />
@@ -21,8 +22,8 @@ function Product(props) {
           </View>
         </View>
       ) : (
-        <View style={{ width: 133, flex: 1, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-          <Text style={{ fontSize: 18, fontWeight: 400, color: "#E94730" }}>xem tất cả Thử quán mới tại LOSHIP</Text>
+        <View style={{ width: 133, flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={{ fontSize: 18, fontWeight: 'bold', color: "#E94730", textAlign: 'center' }}>xem tất cả Thử quán mới tại LOSHIP</Text>
           <Image source={require('../assets/next.png')} style={{ height: 20, width: 20 }} />
         </View>
       )}

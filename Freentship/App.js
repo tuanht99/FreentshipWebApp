@@ -18,28 +18,28 @@ import Products from "./components/products";
 function HomeScreen() {
   const data1 = [
     {
-      nameImage: "food.png",
+      nameImage: "https://images.foody.vn/res/g92/910024/prof/s576x330/foody-upload-api-foody-mobile-avar3-190426091947.jpg",
       text: "Cơm gà 1",
       numberAddress: "1.5",
       discount: "10",
       id: 1,
     },
     {
-      nameImage: "food.png",
+      nameImage: "https://www.hanoilocaltour.com/wp-content/uploads/5-Places-to-Try-Banh-Cuon-Rolled-Rice-Flour-Pancake-in-Hanoi.jpg",
       text: "Cơm gà 2",
       numberAddress: "1.5",
       discount: "10",
       id: 2,
     },
     {
-      nameImage: "food.png",
+      nameImage: "https://prolandtravel.vn/wp-content/uploads/banh-xeo-Copy.jpg",
       text: "Cơm gà 3",
       numberAddress: "1.5",
       discount: "10",
       id: 3,
     },
     {
-      nameImage: "food.png",
+      nameImage: "https://sites.google.com/site/vietnamesefoodaddict/_/rsrc/1472768599688/home/banhdacua-crabricenoodle/cach-nau-banh-da-cua-hai-phong1.jpg",
       text: "Cơm gà 4",
       numberAddress: "1.5",
       discount: "10",
@@ -113,7 +113,7 @@ function HomeScreen() {
       id: 3,
     },
     {
-      nameImage: "food.png",
+      nameImage: "https://reactjs.org/logo-og.png",
       text: "Cơm gà 4",
       numberAddress: "1.5",
       discount: "10",
@@ -220,7 +220,7 @@ function HomeScreen() {
               <Text
                 style={{
                   fontSize: 22,
-                  fontWeight: 800,
+                  fontWeight: 'bold',
                   marginTop: 6,
                   marginStart: 8,
                 }}
