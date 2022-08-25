@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
-const DetailsScreen = ({ navigation, route }) => {
+const DetailsScreenView = ({ navigation, route }) => {
   return (
     <View>
       <View>
@@ -203,4 +203,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DetailsScreen;
+export default DetailsScreenView;

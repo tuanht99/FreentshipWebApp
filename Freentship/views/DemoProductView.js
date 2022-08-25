@@ -3,16 +3,16 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 
-const DemoProduct = () => {
+const DemoProductView = () => {
     const navigation = useNavigation();
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>This is Product Screen</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('DetailsScreen')}>
+        <TouchableOpacity onPress={() => navigation.navigate('DetailsScreenView')}>
             <Text>Product</Text>
         </TouchableOpacity>
     </View>
   )
 }
 
-export default DemoProduct
+export default DemoProductView
