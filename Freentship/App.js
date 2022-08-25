@@ -7,11 +7,12 @@ import NotifyView from './views/NotifyView'
 import Category1 from './components/Category1';
 import HomeView from './views/HomeView';
 import RootNavigator from './navigators/RootNavigator';
+import DetailsScreenView from './views/DetailsScreenView';
 
 export default function App() {
   return (
     <>
-      <RootNavigator />
+      <DetailsScreenView />
     </>
     // <RootNavigator />
   );

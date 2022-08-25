@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     fontfamily: "Inter",
     lineheight: 17,
     fontSize: 14,
-    fontWeight: 700,
+   
     lineHeight: 17,
   },
 
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     left: 13,
     top: 506,
     fontfamily: "Inter",
-    fontweight: 700,
+  
     fontsize: 13,
     lineheight: 16,
   },
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
     left: 14,
     top: 537,
     fontfamily: "Inter",
-    fontweight: 400,
+  
     fontsize: 10,
     lineheight: 12,
   },
