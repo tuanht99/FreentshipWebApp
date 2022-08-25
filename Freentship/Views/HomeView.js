@@ -12,7 +12,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { MaterialIcons, Feather, Ionicons } from "react-native-vector-icons";
 import TextImage from "../components/textImage";
 import Products from "../components/products";
-import FoodScreen from "./FoodScreen";
+import FoodScreen from "./FoodView";
 
 const data1 = [
   {
