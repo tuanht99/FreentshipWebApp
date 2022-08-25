@@ -5,7 +5,7 @@ import AppStyle from '../themes/NotifyTheme'
 
 
 
-export default function TextImage() {
+export default function NotifyView() {
   return (
     <View style={AppStyle.view}>
 

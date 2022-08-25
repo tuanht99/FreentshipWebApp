@@ -7,7 +7,7 @@ function Category1(props) {
     data2: { height: 140, width: 133 },
     data3: { textAlign: 'center', fontSize: 18, fontWeight: 'bold', marginTop: 8 },
   };
-  props.data.push({ nameImage: '', text: '', numberAddress: '', discount: '', id: 999 });
+  props.data.push({ nameImage: '', text: '', numberAddress: '', discount: '', id: 9 });
 
   return (
     <View style={{ height: 264, backgroundColor: '#fefefe', marginVertical: 12, paddingHorizontal: 14 }} >

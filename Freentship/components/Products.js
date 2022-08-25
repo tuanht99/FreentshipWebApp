@@ -7,7 +7,7 @@ function Products(props) {
     data2: { height: 140, width: 133, borderTopLeftRadius: 8, borderTopRightRadius: 8 },
     data3: { fontSize: 18, fontWeight: 'bold', marginTop: 8 },
   };
-  props.data.push({ nameImage: '', text: '', numberAddress: '', discount: '', id: 999 });
+  props.data.push({ nameImage: '', text: '', numberAddress: '', discount: '', id: 9 });
   return (
     <View style={{ height: 304, backgroundColor: '#fefefe', marginVertical: 12, paddingHorizontal: 14, paddingBottom: 14 }} >
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 18 }}>

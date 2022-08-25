@@ -13,6 +13,7 @@ import { MaterialIcons, Feather, Ionicons } from "react-native-vector-icons";
 import TextImage from "../components/TextImage";
 import Products from "../components/Products";
 import FoodScreen from "./FoodView";
+import NotifyView from "./NotifyView";
 
 const data1 = [
   {
@@ -129,13 +130,7 @@ const data3 = [
 function HomeScreen() {
   const HomeTab = createBottomTabNavigator();
 
-  function NotificationsScreen() {
-    return (
-      <View style={styles.container}>
-        <Text>Notifications Screen</Text>
-      </View>
-    );
-  }
+ 
   function ProfileScreen() {
     return (
       <View style={styles.container}>
@@ -320,7 +315,7 @@ function HomeScreen() {
       />
       <HomeTab.Screen
         name="Notifications"
-        component={NotificationsScreen}
+        component={NotifyView}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Feather name="bell" color={color} size={size} />
@@ -342,7 +337,7 @@ function HomeScreen() {
 
 const Stack = createStackNavigator();
 
-export default function App() {
+export default function HomeView() {
   return (
     <NavigationContainer>
       <Stack.Navigator
