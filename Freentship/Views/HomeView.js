@@ -10,8 +10,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { MaterialIcons, Feather, Ionicons } from "react-native-vector-icons";
-import TextImage from "../components/textImage";
-import Products from "../components/products";
+import TextImage from "../components/TextImage";
+import Products from "../components/Products";
 import FoodScreen from "./FoodView";
 
 const data1 = [

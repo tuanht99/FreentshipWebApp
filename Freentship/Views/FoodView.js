@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { MaterialIcons, Feather, Ionicons } from "react-native-vector-icons";
-import Products from "../components/products";
+import Products from "../components/Products";
 import Category1 from "../components/Category1";
 
 function FoodScreen({ navigation, route }) {

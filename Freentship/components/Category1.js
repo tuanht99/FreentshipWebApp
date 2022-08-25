@@ -1,5 +1,5 @@
 import { View, Text, Pressable, FlatList } from 'react-native';
-import Product from '../components/product';
+import Product from './Product';
 
 function Category1(props) {
   const styles = {

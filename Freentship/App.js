@@ -1,4 +1,4 @@
-import HomeScreen from './Views/HomeView';
+import HomeScreen from './views/HomeView';
 
 export default function App() {
   return (

@@ -1,5 +1,5 @@
 import { View, Text, Pressable, FlatList } from 'react-native';
-import Product from './product';
+import Product from './Product';
 
 function Products(props) {
   const styles = {
