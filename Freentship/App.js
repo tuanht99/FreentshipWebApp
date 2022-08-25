@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { View } from 'react-native'
 
 import React from 'react'
@@ -20,3 +21,15 @@ export default function App() {
 
 
 
+=======
+import * as React from 'react';
+
+
+import LoginNavigator from './navigators/LoginNavigator';
+
+export default function App() {
+  return (
+    <LoginNavigator />
+  );
+}
+>>>>>>> 5-Tuan/1_register
