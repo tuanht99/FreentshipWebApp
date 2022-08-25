@@ -102,9 +102,9 @@ export default function BooksListApp({ navigation }) {
   ];
 
   return (
-    <SafeAreaView style={AppStyle.StyleInforUser.container}>
+    <SafeAreaView style={AppStyle.InforUserTheme.container}>
       <StatusBar backgroundColor='#EEEEEE' />
-      <View style={AppStyle.StyleInforUser.info}>
+      <View style={AppStyle.InforUserTheme.info}>
 
         {/* <View >
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -115,11 +115,11 @@ export default function BooksListApp({ navigation }) {
         </View> */}
 
         <View>
-          <ScrollView style={AppStyle.StyleInforUser.scollview}>
+          <ScrollView style={AppStyle.InforUserTheme.scollview}>
 
-            <View style={AppStyle.StyleInforUser.fdRow}>
+            <View style={AppStyle.InforUserTheme.fdRow}>
               <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
-                <Image style={AppStyle.StyleInforUser.imgUser} source={Avatar} />
+                <Image style={AppStyle.InforUserTheme.imgUser} source={Avatar} />
               </View>
 
               <View style={{ flexDirection: 'column', flex: 4 }}>
@@ -140,57 +140,57 @@ export default function BooksListApp({ navigation }) {
             </View>
 
 
-            <View style={[AppStyle.StyleInforUser.mr10, AppStyle.StyleInforUser.horizonline]} />
+            <View style={[AppStyle.InforUserTheme.mr10, AppStyle.InforUserTheme.horizonline]} />
 
-            <View style={AppStyle.StyleInforUser.fdRow}>
-              <Image style={AppStyle.StyleInforUser.imgGif} source={Gif} />
+            <View style={AppStyle.InforUserTheme.fdRow}>
+              <Image style={AppStyle.InforUserTheme.imgGif} source={Gif} />
 
               <View style={{ flexDirection: 'column', flex: 4 }}>
-                <Text style={[AppStyle.StyleInforUser.bold, AppStyle.StyleInforUser.italic]}>
+                <Text style={[AppStyle.InforUserTheme.bold, AppStyle.InforUserTheme.italic]}>
                   Giới thiệu freen't ship với bạn bè
                 </Text>
-                <Text style={[AppStyle.StyleInforUser.italic, AppStyle.StyleInforUser.textGif]}>
+                <Text style={[AppStyle.InforUserTheme.italic, AppStyle.InforUserTheme.textGif]}>
                   Nhận ngay phần thưởng hấp dẫn
                 </Text>
               </View>
-              <AntDesign name="right" style={AppStyle.StyleInforUser.rightIcon} />
+              <AntDesign name="right" style={AppStyle.InforUserTheme.rightIcon} />
             </View>
 
-            <View style={[AppStyle.StyleInforUser.mr10, AppStyle.StyleInforUser.horizonline]} />
+            <View style={[AppStyle.InforUserTheme.mr10, AppStyle.InforUserTheme.horizonline]} />
             {supportList.map((support) => (
-              <TouchableOpacity style={AppStyle.StyleInforUser.supportLoShip} onPress={() => navigation.navigate(support.navigation)}>
+              <TouchableOpacity style={AppStyle.InforUserTheme.supportLoShip} onPress={() => navigation.navigate(support.navigation)}>
                 <View>
-                  <FontAwesome5 name={support.icon1} style={AppStyle.StyleInforUser.icon} />
+                  <FontAwesome5 name={support.icon1} style={AppStyle.InforUserTheme.icon} />
                 </View>
                 <View style={{ flexDirection: 'row', flex: 4, }} >
                   <Text style={{ fontSize: 15 }}>
                     {support.content}
                   </Text>
                 </View>
-                <AntDesign name={support.icon2} style={AppStyle.StyleInforUser.rightIcon} />
+                <AntDesign name={support.icon2} style={AppStyle.InforUserTheme.rightIcon} />
               </TouchableOpacity>
             ))}
 
-            <View style={[AppStyle.StyleInforUser.mr10, AppStyle.StyleInforUser.horizonline]} />
+            <View style={[AppStyle.InforUserTheme.mr10, AppStyle.InforUserTheme.horizonline]} />
 
-            <View style={AppStyle.StyleInforUser.supportLoShip}>
-              <MaterialCommunityIcons name="tray-arrow-up" style={AppStyle.StyleInforUser.icon} />
+            <View style={AppStyle.InforUserTheme.supportLoShip}>
+              <MaterialCommunityIcons name="tray-arrow-up" style={AppStyle.InforUserTheme.icon} />
               <View style={{ flexDirection: 'row', flex: 4, }} >
-                <Text style={AppStyle.StyleInforUser.textVersion}>
+                <Text style={AppStyle.InforUserTheme.textVersion}>
                   Phiên bản hiện tại 2.21.201
                 </Text>
               </View>
 
             </View>
 
-            <View style={[AppStyle.StyleInforUser.mr10, AppStyle.StyleInforUser.horizonline]} />
+            <View style={[AppStyle.InforUserTheme.mr10, AppStyle.InforUserTheme.horizonline]} />
 
 
-            <Text style={AppStyle.StyleInforUser.htrOrderText}>Lịch sử đơn hàng</Text>
+            <Text style={AppStyle.InforUserTheme.htrOrderText}>Lịch sử đơn hàng</Text>
 
 
             <FlatList data={DATA} keyExtractor={item => item.id} renderItem ={({ item }) => (
-            <TouchableOpacity style={AppStyle.StyleInforUser.htrOrder} onPress={() => navigation.navigate('Store')}>
+            <TouchableOpacity style={AppStyle.InforUserTheme.htrOrder} onPress={() => navigation.navigate('Store')}>
               <View style={{
                 flex: 2, justifyContent: "center",
                 alignItems: "center",
@@ -204,16 +204,16 @@ export default function BooksListApp({ navigation }) {
                 }} source={item.image} />
               </View>
               <View style={{ flexDirection: 'column', flex: 4 }}>
-                <Text style={[AppStyle.StyleInforUser.bold, AppStyle.StyleInforUser.textSize17]}>
+                <Text style={[AppStyle.InforUserTheme.bold, AppStyle.InforUserTheme.textSize17]}>
                   {item.name}
                 </Text>
-                <Text style={AppStyle.StyleInforUser.textGif}>
+                <Text style={AppStyle.InforUserTheme.textGif}>
                   {item.discription}
                 </Text>
                 <Text style={{ fontSize: 13 }}>
                   {item.price}
                 </Text>
-                <Text style={AppStyle.StyleInforUser.orderStatusTrue}>
+                <Text style={AppStyle.InforUserTheme.orderStatusTrue}>
                   {item.status}
                 </Text>
               </View>

@@ -4,24 +4,24 @@ import AppStyle from '../themes';
 import Longxaodua from '../assets/longxaodua.jpg';
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
+
 
 export default function ComingSoon({ navigation }) {
     return (
-        <SafeAreaView style={AppStyle.StyleStore.container}>
+        <SafeAreaView style={AppStyle.StoreTheme.container}>
             <ScrollView>
 
-                <ImageBackground style={AppStyle.StyleStore.imgFood} source={Longxaodua}>
-                    <TouchableOpacity style={[AppStyle.StyleStore.iconCicle, AppStyle.StyleStore.rightIcon]} onPress={() => navigation.goBack()}>
+                <ImageBackground style={AppStyle.StoreTheme.imgFood} source={Longxaodua}>
+                    <TouchableOpacity style={[AppStyle.StoreTheme.iconCicle, AppStyle.StoreTheme.rightIcon]} onPress={() => navigation.goBack()}>
                         <AntDesign name="arrowleft" size={21} color="#fff" />
                     </TouchableOpacity>
-                    <TouchableOpacity style={[AppStyle.StyleStore.iconCicle, AppStyle.StyleStore.heartIcon]}>
+                    <TouchableOpacity style={[AppStyle.StoreTheme.iconCicle, AppStyle.StoreTheme.heartIcon]}>
                         <AntDesign name="heart" size={21} color="red" />
                     </TouchableOpacity>
-                    <TouchableOpacity style={[AppStyle.StyleStore.iconCicle, AppStyle.StyleStore.srearchIcon]}>
+                    <TouchableOpacity style={[AppStyle.StoreTheme.iconCicle, AppStyle.StoreTheme.srearchIcon]}>
                         <FontAwesome5 name="search" size={21} color="#fff" />
                     </TouchableOpacity>
-                    <TouchableOpacity style={[AppStyle.StyleStore.iconCicle, AppStyle.StyleStore.sharechIcon]}>
+                    <TouchableOpacity style={[AppStyle.StoreTheme.iconCicle, AppStyle.StoreTheme.sharechIcon]}>
                         <FontAwesome5 name="external-link-alt" size={21} color="#000" />
                     </TouchableOpacity>
                 </ImageBackground>
