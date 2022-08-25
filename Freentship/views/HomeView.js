@@ -23,28 +23,28 @@ const data1 = [
     id: 1,
   },
   {
-    nameImage: "food.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 2",
     numberAddress: "1.5",
     discount: "10",
     id: 2,
   },
   {
-    nameImage: "food.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 3",
     numberAddress: "1.5",
     discount: "10",
     id: 3,
   },
   {
-    nameImage: "food.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 4",
     numberAddress: "1.5",
     discount: "10",
     id: 4,
   },
   {
-    nameImage: "food.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 5",
     numberAddress: "1.5",
     discount: "10",
@@ -53,35 +53,35 @@ const data1 = [
 ];
 const data2 = [
   {
-    nameImage: "monAn1.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 1",
     numberAddress: "1.5",
     discount: "10",
     id: 1,
   },
   {
-    nameImage: "monAn1.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 2",
     numberAddress: "1.5",
     discount: "10",
     id: 2,
   },
   {
-    nameImage: "monAn1.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 3",
     numberAddress: "1.5",
     discount: "10",
     id: 3,
   },
   {
-    nameImage: "monAn1.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 4",
     numberAddress: "1.5",
     discount: "10",
     id: 4,
   },
   {
-    nameImage: "monAn1.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 5",
     numberAddress: "1.5",
     discount: "10",
@@ -90,35 +90,35 @@ const data2 = [
 ];
 const data3 = [
   {
-    nameImage: "food.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 1",
     numberAddress: "1.5",
     discount: "10",
     id: 1,
   },
   {
-    nameImage: "food.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 2",
     numberAddress: "1.5",
     discount: "10",
     id: 2,
   },
   {
-    nameImage: "food.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 3",
     numberAddress: "1.5",
     discount: "10",
     id: 3,
   },
   {
-    nameImage: "food.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 4",
     numberAddress: "1.5",
     discount: "10",
     id: 4,
   },
   {
-    nameImage: "food.png",
+    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
     text: "Cơm gà 5",
     numberAddress: "1.5",
     discount: "10",
@@ -207,7 +207,7 @@ function HomeScreen() {
               }}
             >
               <Image
-                source={require("./assets/avatar.jpg")}
+                source={require("../assets/avatar.jpg")}
                 style={{
                   height: 40,
                   width: 40,
@@ -310,7 +310,7 @@ function HomeScreen() {
       }}
     >
       <HomeTab.Screen
-        name="Home"
+        name="HomeMain"
         component={Home}
         options={{
           tabBarIcon: ({ color, size }) => (
