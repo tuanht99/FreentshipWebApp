@@ -1,8 +1,8 @@
 // Import mock screens
-import Infor from '../views/Infor';
-import FavoriteStore from '../views/FavoriteStore';
-import ComingSoon from '../views/ComingSoon';
-import Store from '../views/Store';
+import Infor from '../views/InforView';
+import FavoriteStore from '../views/FavoriteStoreView';
+import ComingSoon from '../views/ComingSoonView';
+import Store from '../views/StoreView';
 // In App.js in a new project
 
 import * as React from 'react';

@@ -1,9 +1,9 @@
-import StyleFavoriteStore from './StyleFavoriteStore';
-import StyleInforUser from './StyleInforUser';
-import StyleStore from './StyleStore';
+import FavoriteStoreTheme from './FavoriteStoreTheme';
+import InforUserTheme from './InforUserTheme';
+import StoreTheme from './StoreTheme';
 const AppStyle = {
-    StyleFavoriteStore,
-    StyleInforUser,
-    StyleStore,
+    FavoriteStoreTheme,
+    InforUserTheme,
+    StoreTheme,
 }
 export default AppStyle;
