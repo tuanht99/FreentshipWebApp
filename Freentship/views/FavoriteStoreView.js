@@ -5,7 +5,7 @@ import { Dimensions } from 'react-native';
 import { Octicons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons'; 
-import AppStyle from '../themes';
+import AppStyle from '../themes/IndexTheme';
 
 const windowWidth = Dimensions.get("window").width;
 
