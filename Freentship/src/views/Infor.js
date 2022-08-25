@@ -147,7 +147,8 @@ export default function BooksListApp({ navigation }) {
 
 
             <Text style={AppStyle.StyleInforUser.htrOrderText}>Lịch sử đơn hàng</Text>
-            <View style={AppStyle.StyleInforUser.htrOrder}>
+
+            <TouchableOpacity style={AppStyle.StyleInforUser.htrOrder} onPress={()=> navigation.navigate('Store')}>
               <View style={{
                 flex: 2, justifyContent: "center",
                 alignItems: "center",
@@ -174,7 +175,7 @@ export default function BooksListApp({ navigation }) {
                   Đã giao
                 </Text>
               </View>
-            </View>
+            </TouchableOpacity>
 
             <View style={AppStyle.StyleInforUser.htrOrder}>
               <View style={{
