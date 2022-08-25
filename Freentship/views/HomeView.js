@@ -207,7 +207,7 @@ function HomeScreen() {
               }}
             >
               <Image
-                source={require("./assets/avatar.jpg")}
+                source={require("../assets/avatar.jpg")}
                 style={{
                   height: 40,
                   width: 40,
