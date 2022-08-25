@@ -1,24 +1,19 @@
-//stack
-import React from "react";
-import DemoProductView from "./views/DemoProductView";
-import DetailsScreenView from "./views/DetailsScreenView";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { View } from 'react-native'
 
-const Stack = createStackNavigator();
+import React from 'react'
+import NotifyView from './views/NotifyView'
+// import InforUserSettings from './view/InforSetting'
+// import RootNavigator from './navigators/RootNavigator';
+import Category1 from './components/Category1';
+import HomeView from './views/HomeView';
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="DemoProductView"
-          component={DemoProductView}
-        ></Stack.Screen>
-        <Stack.Screen
-          name="DetailsScreenView"
-          component={DetailsScreenView}
-        ></Stack.Screen>
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <HomeView />
+    </>
+    // <RootNavigator />
   );
 }
+
+
+

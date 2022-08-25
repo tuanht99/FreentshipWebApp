@@ -1,4 +1,5 @@
 /Freentship/node_modules/
+/Freentship/.expo/
 /Freentship.expo/
 /Freentship/dist/
 /Freentship/npm-debug.*
@@ -13,3 +14,4 @@ package-lock.json
 /Freentship/yarn.lock
 # macOS
 /Freentship/.DS_Store
+/Freentship/.expo-shared
