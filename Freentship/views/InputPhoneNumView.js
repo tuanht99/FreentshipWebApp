@@ -1,6 +1,6 @@
 import { Text, View, SafeAreaView, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react';
-import ThemeRegister from '../themes/ThemeRegister';
+import ThemeRegister from '../themes/RegisterTheme';
 
 export default function InputPhoneNumScreen({ navigation }) {
   const txtPhone = 'Nhập số điện thoại của bạn ở đây';

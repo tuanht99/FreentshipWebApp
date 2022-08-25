@@ -2,9 +2,9 @@ import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-import InputPhoneNumScreen from '../views/InputPhoneNumScreen';
+import InputPhoneNumScreen from '../views/InputPhoneNumView';
 import InputPasswordView from '../views/InputPasswordView';
-import OTPVerification from '../views/OTPVerification';
+import OTPVerification from '../views/OTPVerificationView';
 
 const Stack = createNativeStackNavigator();
 
