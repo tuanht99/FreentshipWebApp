@@ -1,15 +1,16 @@
 import { View, Text, Pressable, FlatList } from 'react-native';
-import Product from './product';
+import Product from '../components/product';
 
-function Products(props) {
+function Category1(props) {
   const styles = {
-    data1: { borderWidth: 1, borderColor: '#d9d9d9', borderRadius: 8, marginStart: 14 },
-    data2: { height: 140, width: 133, borderTopLeftRadius: 8, borderTopRightRadius: 8 },
-    data3: { fontSize: 18, fontWeight: 'bold', marginTop: 8 },
+    data1: { marginStart: 14 },
+    data2: { height: 140, width: 133 },
+    data3: { textAlign: 'center', fontSize: 18, fontWeight: 'bold', marginTop: 8 },
   };
   props.data.push({ nameImage: '', text: '', numberAddress: '', discount: '', id: 999 });
+
   return (
-    <View style={{ height: 304, backgroundColor: '#fefefe', marginVertical: 12, paddingHorizontal: 14, paddingBottom: 14 }} >
+    <View style={{ height: 264, backgroundColor: '#fefefe', marginVertical: 12, paddingHorizontal: 14 }} >
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 18 }}>
         <Text style={{ fontSize: 16, textTransform: 'uppercase', fontWeight: 'bold' }} >
           {props.title}
@@ -26,9 +27,6 @@ function Products(props) {
           <Product
             nameImage={item.nameImage}
             text={item.text}
-            numberAddress={item.numberAddress}
-            discount={item.discount}
-            isButton={item.isButton}
             style={styles}
           />
         )}
@@ -38,4 +36,4 @@ function Products(props) {
   );
 }
 
-export default Products;
+export default Category1;

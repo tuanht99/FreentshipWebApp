@@ -28,7 +28,8 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@types/react-native": "^0.69.5",
-    "@types/react-native-vector-icons": "^6.4.11"
+    "@types/react-native-vector-icons": "^6.4.11",
+    "prettier": "^2.7.1"
   },
   "private": true
 }
