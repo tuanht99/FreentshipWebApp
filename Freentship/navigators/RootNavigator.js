@@ -14,7 +14,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 
 
-function App() {
+function RootNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Thong tin TK">
@@ -32,5 +32,5 @@ function App() {
   );
 }
 
-export default App;
+export default RootNavigator;
 
