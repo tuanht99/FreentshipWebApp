@@ -6,10 +6,12 @@ import NotifyView from './views/NotifyView'
 // import RootNavigator from './navigators/RootNavigator';
 import Category1 from './components/Category1';
 import HomeView from './views/HomeView';
+import RootNavigator from './navigators/RootNavigator';
+
 export default function App() {
   return (
     <>
-      <HomeView />
+      <RootNavigator />
     </>
     // <RootNavigator />
   );
