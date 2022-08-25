@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity, Button,  flex, } from 'react-native'
 import React from 'react'
 
-import AppStyle from '../theme/Styles_Nottify'
+import AppStyle from '../themes/NotifyTheme'
 
 
 
