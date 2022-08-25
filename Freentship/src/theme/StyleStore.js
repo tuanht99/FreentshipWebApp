@@ -38,7 +38,11 @@ import {
     srearchIcon:{
         left:240,
     },
-
+    sharechIcon:{
+      backgroundColor: '#fff',
+      top:170,
+      left:200,
+    },
     orderStatusTrue: {
       color: '#00FF00',
       fontWeight: '700',

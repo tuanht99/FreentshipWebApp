@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, SafeAreaView, ScrollView, StatusBar, TouchableOpacity } from 'react-native';
+import { Text, View, Image, SafeAreaView, ScrollView, StatusBar, TouchableOpacity, FlatList } from 'react-native';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
@@ -15,6 +15,47 @@ import AppStyle from '../theme';
 
 
 export default function BooksListApp({ navigation }) {
+
+  const DATA = [{
+    id: 1,
+    image: Longxaodua ,
+    name: 'Lòng xòa dưa',
+    discription: 'Nhiều lòng ít dưa',
+    price: '30.000',
+    status: 'Đang mở cửa',
+  },
+  {
+    id: 2,
+    image: Longxaodua ,
+    name: 'Lòng xòa dưa',
+    discription: 'Nhiều lòng ít dưa',
+    price: '30.000',
+    status: 'Đang mở cửa',
+  },
+  {
+    id: 3,
+    image: Longxaodua ,
+    name: 'Lòng xòa dưa',
+    discription: 'Nhiều lòng ít dưa',
+    price: '30.000',
+    status: 'Đang mở cửa',
+  },
+  {
+    id: 4,
+    image: Longxaodua ,
+    name: 'Lòng xòa dưa',
+    discription: 'Nhiều lòng ít dưa',
+    price: '30.000',
+    status: 'Đang mở cửa',
+  },
+  {
+    id: 5,
+    image: Longxaodua ,
+    name: 'Lòng xòa dưa',
+    discription: 'Nhiều lòng ít dưa',
+    price: '30.000',
+    status: 'Đang mở cửa',
+  }];
 
   const supportList = [{
     icon1: 'smile',
@@ -78,7 +119,7 @@ export default function BooksListApp({ navigation }) {
           <ScrollView style={AppStyle.StyleInforUser.scollview}>
 
             <View style={AppStyle.StyleInforUser.fdRow}>
-              <View style={{flex: 2,justifyContent: 'center',alignItems: 'center'}}>
+              <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
                 <Image style={AppStyle.StyleInforUser.imgUser} source={Avatar} />
               </View>
 
@@ -148,7 +189,9 @@ export default function BooksListApp({ navigation }) {
 
             <Text style={AppStyle.StyleInforUser.htrOrderText}>Lịch sử đơn hàng</Text>
 
-            <TouchableOpacity style={AppStyle.StyleInforUser.htrOrder} onPress={()=> navigation.navigate('Store')}>
+
+            <FlatList data={DATA} keyExtractor={item => item.id} renderItem ={({ item }) => (
+            <TouchableOpacity style={AppStyle.StyleInforUser.htrOrder} onPress={() => navigation.navigate('Store')}>
               <View style={{
                 flex: 2, justifyContent: "center",
                 alignItems: "center",
@@ -159,112 +202,27 @@ export default function BooksListApp({ navigation }) {
                   overflow: 'hidden',
                   resizeMode: 'contain',
 
-                }} source={Longxaodua} />
+                }} source={item.image} />
               </View>
               <View style={{ flexDirection: 'column', flex: 4 }}>
                 <Text style={[AppStyle.StyleInforUser.bold, AppStyle.StyleInforUser.textSize17]}>
-                  Lòng xào dưa
+                  {item.name}
                 </Text>
                 <Text style={AppStyle.StyleInforUser.textGif}>
-                  Nhiều lòng ít dưa
+                  {item.discription}
                 </Text>
                 <Text style={{ fontSize: 13 }}>
-                  Tổng tiền : 30.000 đ
-                </Text>
-                <Text style={AppStyle.StyleInforUser.orderStatusTrue}>
-                  Đã giao
-                </Text>
-              </View>
-            </TouchableOpacity>
-
-            <View style={AppStyle.StyleInforUser.htrOrder}>
-              <View style={{
-                flex: 2, justifyContent: "center",
-                alignItems: "center",
-              }}>
-                <Image style={{
-                  height: 90, width: 90,
-                  borderRadius: 15,
-                  overflow: 'hidden',
-                  resizeMode: 'contain',
-
-                }} source={Longxaodua} />
-              </View>
-              <View style={{ flexDirection: 'column', flex: 4 }}>
-                <Text style={[AppStyle.StyleInforUser.bold, AppStyle.StyleInforUser.textSize17]}>
-                  Lòng xào dưa
-                </Text>
-                <Text style={AppStyle.StyleInforUser.textGif}>
-                  Nhiều lòng ít dưa
-                </Text>
-                <Text style={{ fontSize: 13 }}>
-                  Tổng tiền : 30.000 đ
-                </Text>
-                <Text style={AppStyle.StyleInforUser.orderStatusTrue}>
-                  Đã giao
-                </Text>
-              </View>
-            </View>
-
-            <View style={AppStyle.StyleInforUser.htrOrder}>
-              <View style={{
-                flex: 2, justifyContent: "center",
-                alignItems: "center",
-              }}>
-                <Image style={{
-                  height: 90, width: 90,
-                  borderRadius: 15,
-                  overflow: 'hidden',
-                  resizeMode: 'contain',
-
-                }} source={Longxaodua} />
-              </View>
-
-
-              <View style={{ flexDirection: 'column', flex: 4 }}>
-                <Text style={[AppStyle.StyleInforUser.bold, AppStyle.StyleInforUser.textSize17]}>
-                  Lòng xào dưa
-                </Text>
-                <Text style={AppStyle.StyleInforUser.textGif}>
-                  Nhiều lòng ít dưa
-                </Text>
-                <Text style={{ fontSize: 13 }}>
-                  Tổng tiền : 30.000 đ
+                  {item.price}
                 </Text>
                 <Text style={AppStyle.StyleInforUser.orderStatusFalse}>
-                  Đã hủy
+                  {item.status}
                 </Text>
               </View>
-            </View>
+            </TouchableOpacity>)}>
 
-            <View style={AppStyle.StyleInforUser.htrOrder}>
-              <View style={{
-                flex: 2, justifyContent: "center",
-                alignItems: "center",
-              }}>
-                <Image style={{
-                  height: 90, width: 90,
-                  borderRadius: 15,
-                  overflow: 'hidden',
-                  resizeMode: 'contain',
 
-                }} source={Longxaodua} />
-              </View>
-              <View style={{ flexDirection: 'column', flex: 4 }}>
-                <Text style={[AppStyle.StyleInforUser.bold, AppStyle.StyleInforUser.textSize17]}>
-                  Lòng xào dưa
-                </Text>
-                <Text style={AppStyle.StyleInforUser.textGif}>
-                  Nhiều lòng ít dưa
-                </Text>
-                <Text style={{ fontSize: 13 }}>
-                  Tổng tiền : 30.000 đ
-                </Text>
-                <Text style={AppStyle.StyleInforUser.orderStatusFalse}>
-                  Đã hủy
-                </Text>
-              </View>
-            </View>
+            </FlatList>
+
 
           </ScrollView>
         </View>

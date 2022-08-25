@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { View, Text, Button, Image, ScrollView, SafeAreaView, ImageBackground,TouchableOpacity } from 'react-native';
+import { View, Text, Button, Image, ScrollView, SafeAreaView, ImageBackground, TouchableOpacity } from 'react-native';
 import AppStyle from '../theme';
 import Longxaodua from '../assets/longxaodua.jpg';
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
-
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function ComingSoon({ navigation }) {
     return (
@@ -13,24 +13,28 @@ export default function ComingSoon({ navigation }) {
 
                 <ImageBackground style={AppStyle.StyleStore.imgFood} source={Longxaodua}>
                     <TouchableOpacity style={[AppStyle.StyleStore.iconCicle, AppStyle.StyleStore.rightIcon]} onPress={() => navigation.goBack()}>
-                        <AntDesign name="arrowleft" size={21} color="#fff"/>
+                        <AntDesign name="arrowleft" size={21} color="#fff" />
                     </TouchableOpacity>
                     <TouchableOpacity style={[AppStyle.StyleStore.iconCicle, AppStyle.StyleStore.heartIcon]}>
-                        <AntDesign name="heart" size={21} color="red"/>
+                        <AntDesign name="heart" size={21} color="red" />
                     </TouchableOpacity>
                     <TouchableOpacity style={[AppStyle.StyleStore.iconCicle, AppStyle.StyleStore.srearchIcon]}>
-                        <FontAwesome5 name="search" size={21} color="#fff"/>
+                        <FontAwesome5 name="search" size={21} color="#fff" />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={[AppStyle.StyleStore.iconCicle, AppStyle.StyleStore.sharechIcon]}>
+                        <FontAwesome5 name="external-link-alt" size={21} color="#000" />
                     </TouchableOpacity>
                 </ImageBackground>
 
-                <View style={{ flex: 1 }}>
-                    <Text style={{ fontSize: 16 }}>
-                        Nguyễn Văn Mười
-                    </Text>
+                <View style={{ flexDirection: 'row', backgroundColor: '#FF3333', justifyContent: 'center', borderRadius: 30, padding: 3, marginTop: 20, marginLeft: 20, maxWidth: 160 }}>
+                    <FontAwesome5 name="star" size={18} color="#fff" />
+                    <Text style={{ color: '#fff', marginLeft: 15 }}>Đối tác loship</Text>
                 </View>
-                <View style={{ flex: 1 }}>
 
-                </View>
+                
+                    <Text style={{ fontWeight: 'bold', fontSize:20 , marginLeft: 20 ,marginRight: 20, marginTop:10 }}>Bún Đậu Mắm Tôm Nhà Thỏ - Long
+                        Bình</Text>
+              
             </ScrollView>
 
         </SafeAreaView>
