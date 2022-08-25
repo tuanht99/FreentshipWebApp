@@ -8,8 +8,7 @@ import Logo from '../assets/favicon.png';
 import Avatar from '../assets/longxaodua.jpg';
 import Longxaodua from '../assets/longxaodua.jpg';
 import Gif from '../assets/gif.jpg';
-
-import AppStyle from '../theme';
+import AppStyle from '../themes';
 
 
 
@@ -214,7 +213,7 @@ export default function BooksListApp({ navigation }) {
                 <Text style={{ fontSize: 13 }}>
                   {item.price}
                 </Text>
-                <Text style={AppStyle.StyleInforUser.orderStatusFalse}>
+                <Text style={AppStyle.StyleInforUser.orderStatusTrue}>
                   {item.status}
                 </Text>
               </View>

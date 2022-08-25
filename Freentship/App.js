@@ -1,6 +1,6 @@
 import React from 'react';
 
-import RootNavigator from './src/navigators/RootNavigator';
+import RootNavigator from './navigators/RootNavigator';
 
 export default function App() {
   return <RootNavigator />;

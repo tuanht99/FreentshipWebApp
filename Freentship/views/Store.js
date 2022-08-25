@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Button, Image, ScrollView, SafeAreaView, ImageBackground, TouchableOpacity } from 'react-native';
-import AppStyle from '../theme';
+import AppStyle from '../themes';
 import Longxaodua from '../assets/longxaodua.jpg';
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
