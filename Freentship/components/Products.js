@@ -1,5 +1,6 @@
-import { View, Text, Pressable, FlatList } from 'react-native';
+import { View, Text, Pressable, ScrollView, Image } from 'react-native';
 import Product from './Product';
+import ProductsTheme from '../themes/ProductsTheme';
 
 function Products(props) {
   const styles = {
@@ -7,33 +8,27 @@ function Products(props) {
     data2: { height: 140, width: 133, borderTopLeftRadius: 8, borderTopRightRadius: 8 },
     data3: { fontSize: 18, fontWeight: 'bold', marginTop: 8 },
   };
-  props.data.push({ nameImage: '', text: '', numberAddress: '', discount: '', id: 9 });
   return (
-    <View style={{ height: 304, backgroundColor: '#fefefe', marginVertical: 12, paddingHorizontal: 14, paddingBottom: 14 }} >
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 18 }}>
-        <Text style={{ fontSize: 16, textTransform: 'uppercase', fontWeight: 'bold' }} >
+    <View style={ProductsTheme.container} >
+      <View style={ProductsTheme.products1}>
+        <Text style={ProductsTheme.products2} >
           {props.title}
         </Text>
         <Pressable style={{ flexDirection: 'row' }} onPress={() => console.log('Xem tat ca: ', props.title)}>
           <Text style={{ color: '#00A3FF', fontSize: 14 }}>Xem tất cả</Text>
         </Pressable>
       </View>
-      <FlatList
-        horizontal={true}
-        contentContainerStyle={{ marginTop: 25, marginStart: -14 }}
-        data={props.data}
-        renderItem={({ item }) => (
-          <Product
-            nameImage={item.nameImage}
-            text={item.text}
-            numberAddress={item.numberAddress}
-            discount={item.discount}
-            isButton={item.isButton}
-            style={styles}
-          />
-        )}
-        keyExtractor={item => item.id.toString()}
-      />
+      <ScrollView horizontal={true} contentContainerStyle={{ marginTop: 25, marginStart: -14 }}>
+        {props.data.map((item, index) => (
+          <Product key={index} nameImage={item.nameImage} text={item.text} numberAddress={item.numberAddress} discount={item.discount} style={styles} />
+        ))}
+        <View style={styles.data1}>
+          <View style={ProductsTheme.products3}>
+            <Text style={ProductsTheme.products4}>xem tất cả Thử quán mới tại LOSHIP</Text>
+            <Image source={require('../assets/next.png')} style={{ height: 20, width: 20 }} />
+          </View>
+        </View>
+      </ScrollView>
     </View>
   );
 }
