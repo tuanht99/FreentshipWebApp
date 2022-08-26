@@ -1,15 +1,11 @@
 import {
-  StyleSheet,
   Text,
   View,
   ScrollView,
   ImageBackground,
   Image,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
-import { MaterialIcons, Feather, Ionicons } from "react-native-vector-icons";
+import { MaterialIcons, Ionicons } from "react-native-vector-icons";
 import TextImage from "../components/TextImage";
 import Products from "../components/Products";
 import FoodScreen from "./FoodView";
@@ -356,10 +352,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#DDD",
-  },
-});
