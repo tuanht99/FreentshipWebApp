@@ -8,6 +8,7 @@ function Category1(props) {
     data2: { height: 140, width: 133 },
     data3: { textAlign: 'center', fontSize: 18, fontWeight: 'bold', marginTop: 8 },
   };
+  props.data.push({ nameImage: '', text: '', numberAddress: '', discount: '', id: 9 });
 
   return (
     <View style={Category1Theme.container} >
