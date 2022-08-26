@@ -102,6 +102,7 @@ export default function BooksListApp({ navigation }) {
   ];
 
   const PROFICLE = [{
+    key: 1,
     name: 'Nguyễn Văn 10',
     phone: '0966.533.699',
     image: Avatar,
