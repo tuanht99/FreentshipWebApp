@@ -16,40 +16,35 @@ import AppStyle from '../themes/IndexTheme';
 export default function BooksListApp({ navigation }) {
 
   const DATA = [{
-    id: 1,
-    image: Longxaodua ,
+    image: Longxaodua,
     name: 'Lòng xòa dưa',
     discription: 'Nhiều lòng ít dưa',
     price: '30.000',
     status: 'Đang mở cửa',
   },
   {
-    id: 2,
-    image: Longxaodua ,
+    image: Longxaodua,
     name: 'Lòng xòa dưa',
     discription: 'Nhiều lòng ít dưa',
     price: '30.000',
     status: 'Đang mở cửa',
   },
   {
-    id: 3,
-    image: Longxaodua ,
+    image: Longxaodua,
     name: 'Lòng xòa dưa',
     discription: 'Nhiều lòng ít dưa',
     price: '30.000',
     status: 'Đang mở cửa',
   },
   {
-    id: 4,
-    image: Longxaodua ,
+    image: Longxaodua,
     name: 'Lòng xòa dưa',
     discription: 'Nhiều lòng ít dưa',
     price: '30.000',
     status: 'Đang mở cửa',
   },
   {
-    id: 5,
-    image: Longxaodua ,
+    image: Longxaodua,
     name: 'Lòng xòa dưa',
     discription: 'Nhiều lòng ít dưa',
     price: '30.000',
@@ -115,7 +110,7 @@ export default function BooksListApp({ navigation }) {
         </View> */}
 
         <View>
-          <ScrollView style={AppStyle.InforUserTheme.scollview}>
+          <ScrollView >
 
             <View style={AppStyle.InforUserTheme.fdRow}>
               <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
@@ -189,35 +184,35 @@ export default function BooksListApp({ navigation }) {
             <Text style={AppStyle.InforUserTheme.htrOrderText}>Lịch sử đơn hàng</Text>
 
 
-            <FlatList data={DATA} keyExtractor={item => item.id} renderItem ={({ item }) => (
-            <TouchableOpacity style={AppStyle.InforUserTheme.htrOrder} onPress={() => navigation.navigate('Store')}>
-              <View style={{
-                flex: 2, justifyContent: "center",
-                alignItems: "center",
-              }}>
-                <Image style={{
-                  height: 90, width: 90,
-                  borderRadius: 15,
-                  overflow: 'hidden',
-                  resizeMode: 'contain',
+            <FlatList data={DATA} keyExtractor={item => item.id} renderItem={({ item }) => (
+              <TouchableOpacity style={AppStyle.InforUserTheme.htrOrder} onPress={() => navigation.navigate('Store')}>
+                <View style={{
+                  flex: 2, justifyContent: "center",
+                  alignItems: "center",
+                }}>
+                  <Image style={{
+                    height: 90, width: 90,
+                    borderRadius: 15,
+                    overflow: 'hidden',
+                    resizeMode: 'contain',
 
-                }} source={item.image} />
-              </View>
-              <View style={{ flexDirection: 'column', flex: 4 }}>
-                <Text style={[AppStyle.InforUserTheme.bold, AppStyle.InforUserTheme.textSize17]}>
-                  {item.name}
-                </Text>
-                <Text style={AppStyle.InforUserTheme.textGif}>
-                  {item.discription}
-                </Text>
-                <Text style={{ fontSize: 13 }}>
-                  {item.price}
-                </Text>
-                <Text style={AppStyle.InforUserTheme.orderStatusTrue}>
-                  {item.status}
-                </Text>
-              </View>
-            </TouchableOpacity>)}>
+                  }} source={item.image} />
+                </View>
+                <View style={{ flexDirection: 'column', flex: 4 }}>
+                  <Text style={[AppStyle.InforUserTheme.bold, AppStyle.InforUserTheme.textSize17]}>
+                    {item.name}
+                  </Text>
+                  <Text style={AppStyle.InforUserTheme.textGif}>
+                    {item.discription}
+                  </Text>
+                  <Text style={{ fontSize: 13 }}>
+                    {item.price}
+                  </Text>
+                  <Text style={AppStyle.InforUserTheme.orderStatusTrue}>
+                    {item.status}
+                  </Text>
+                </View>
+              </TouchableOpacity>)}>
 
 
             </FlatList>
