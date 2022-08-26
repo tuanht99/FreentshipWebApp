@@ -24,7 +24,7 @@ const FavoriteStoreTheme = StyleSheet.create({
   textVersion: { fontSize: 15, color: '#999999' },
   icon: {
     fontSize: 15,
-    marginRight: 20,
+    marginRight: 10,
     fontWeight: 'bold',
     color: "black",
   }
