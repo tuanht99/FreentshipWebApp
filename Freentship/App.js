@@ -1,7 +1,7 @@
-import HomeScreen from './views/HomeView';
+import MainNavigator from './navigators/MainNavigator';
 
 export default function App() {
   return (
-    <HomeScreen />
+    <MainNavigator />
   );
 }
