@@ -1,5 +1,6 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import Ionicon from 'react-native-vector-icons/Ionicons';
+import ProductTheme from '../themes/ProductTheme';
 
 function Product(props) {
   return (
@@ -13,11 +14,11 @@ function Product(props) {
           <Ionicon name="location" size={20} color="#E94730" style={{ marginHorizontal: 4 }} />
           <Text>{props.numberAddress} Km</Text>
         </View>}
-        {props.discount && <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <Image source={require('../assets/discount.png')} style={{ height: 20, width: 20, marginRight: 4 }} />
+        {props.discount && <View style={ProductTheme.product1}>
+          <Image source={require('../assets/discount.png')} style={ProductTheme.product2} />
           <Text>Giảm {props.discount}%</Text>
         </View>}
-        {props.isButton && <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'center', backgroundColor: '#d9d9d9', paddingVertical: 4, marginHorizontal: 12, marginVertical: 4 }}>
+        {props.isButton && <TouchableOpacity style={ProductTheme.product3}>
           <Text>Chọn mua</Text>
         </TouchableOpacity>}
       </View>

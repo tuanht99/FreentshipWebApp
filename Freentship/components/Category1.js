@@ -1,5 +1,6 @@
 import { View, Text, Pressable, ScrollView, Image } from 'react-native';
 import Product from './Product';
+import Category1Theme from '../themes/Category1Theme';
 
 function Category1(props) {
   const styles = {
@@ -9,9 +10,9 @@ function Category1(props) {
   };
 
   return (
-    <View style={{ height: 264, backgroundColor: '#fefefe', marginVertical: 12, paddingHorizontal: 14 }} >
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 18 }}>
-        <Text style={{ fontSize: 16, textTransform: 'uppercase', fontWeight: 'bold' }} >
+    <View style={Category1Theme.container} >
+      <View style={Category1Theme.category1}>
+        <Text style={Category1Theme.category2} >
           {props.title}
         </Text>
         <Pressable style={{ flexDirection: 'row' }} onPress={() => console.log('Xem tat ca: ', props.title)}>
@@ -23,8 +24,8 @@ function Category1(props) {
           <Product key={index} nameImage={item.nameImage} text={item.text} style={styles} />
         ))}
         <View style={styles.data1}>
-          <View style={{ width: 133, flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text style={{ fontSize: 18, fontWeight: 'bold', color: "#E94730", textAlign: 'center' }}>xem tất cả Thử quán mới tại LOSHIP</Text>
+          <View style={Category1Theme.category3}>
+            <Text style={Category1Theme.category4}>xem tất cả Thử quán mới tại LOSHIP</Text>
             <Image source={require('../assets/next.png')} style={{ height: 20, width: 20 }} />
           </View>
         </View>

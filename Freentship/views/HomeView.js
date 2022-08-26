@@ -8,142 +8,37 @@ import {
 import { MaterialIcons, Ionicons } from "react-native-vector-icons";
 import TextImage from "../components/TextImage";
 import Products from "../components/Products";
+import { DataHome } from "../core/data";
+import HomeTheme from "../themes/HomeTheme";
 
-const data1 = [
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 1",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 1,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 2",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 2,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 3",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 3,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 4",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 4,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 5",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 5,
-  },
-];
-const data2 = [
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 1",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 1,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 2",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 2,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 3",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 3,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 4",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 4,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 5",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 5,
-  },
-];
-const data3 = [
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 1",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 1,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 2",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 2,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 3",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 3,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 4",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 4,
-  },
-  {
-    nameImage: "https://cdn.tgdd.vn/2022/01/CookDish/cach-lam-com-ga-chien-xoi-mo-ngon-da-vang-gion-rum-dom-gian-avt-1200x676.jpg",
-    text: "Cơm gà 5",
-    numberAddress: "1.5",
-    discount: "10",
-    id: 5,
-  },
-];
+const txtCategory1 = 'thử quán mới';
+const txtCategory2 = 'đang khuyến mãi';
+const txtCategory3 = 'thương hiệu quen thuộc';
+const txtFood1 = 'Giao đồ ăn';
+const txtFood2 = 'Gọi xe';
+const txtFood3 = 'Đi chợ';
+const txtFood4 = 'Giao hàng';
+const txtFood5 = 'Siêu thị LoX';
+const txtFood6 = 'Mua mỹ phẩm';
+const txtFood7 = 'Giặt ủi';
+const txtFood8 = 'Mua thuốc';
+const txtFood9 = 'Shopping';
+const txtFood10 = 'Chăm thú cưng';
+const txtFood11 = 'Giao hoa';
 
 export default function HomeView({ navigation }) {
   return (
-    <ScrollView contentContainerStyle={{ backgroundColor: "#ddd" }}>
+    <ScrollView contentContainerStyle={HomeTheme.container}>
       <View style={{ height: 130 }}>
         <ImageBackground
           source={require("../assets/backgroundHome.png")}
           style={{ height: 130 }}
         >
           <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              marginTop: 24,
-            }}
+            style={HomeTheme.home1}
           >
             <View
-              style={{
-                flexDirection: "row",
-                padding: 8,
-                backgroundColor: "#767676",
-                opacity: 0.8,
-                borderRadius: 25,
-              }}
+              style={HomeTheme.home2}
             >
               <Ionicons
                 name="location"
@@ -160,11 +55,7 @@ export default function HomeView({ navigation }) {
         </ImageBackground>
       </View>
       <View
-        style={{
-          height: 325,
-          backgroundColor: "#eee",
-          paddingHorizontal: 14,
-        }}
+        style={HomeTheme.home3}
       >
         <View
           style={{
@@ -210,70 +101,70 @@ export default function HomeView({ navigation }) {
             <TextImage
               navigation={navigation}
               nameImage="food.png"
-              text="Giao đồ ăn"
+              text={txtFood1}
             />
             <TextImage
               navigation={navigation}
               nameImage="food.png"
-              text="Gọi xe"
+              text={txtFood2}
             />
             <TextImage
               navigation={navigation}
               nameImage="food.png"
-              text="Đi chợ"
+              text={txtFood3}
             />
             <TextImage
               navigation={navigation}
               nameImage="food.png"
-              text="Giao hàng"
-            />
-          </View>
-          <View style={{ flexDirection: "row", marginTop: 12 }}>
-            <TextImage
-              navigation={navigation}
-              nameImage="food.png"
-              text="Siêu thị LoX"
-            />
-            <TextImage
-              navigation={navigation}
-              nameImage="food.png"
-              text="Mua mỹ phẩm"
-            />
-            <TextImage
-              navigation={navigation}
-              nameImage="food.png"
-              text="Giặt ủi"
-            />
-            <TextImage
-              navigation={navigation}
-              nameImage="food.png"
-              text="Mua thuốc"
+              text={txtFood4}
             />
           </View>
           <View style={{ flexDirection: "row", marginTop: 12 }}>
             <TextImage
               navigation={navigation}
               nameImage="food.png"
-              text="Shopping"
+              text={txtFood5}
             />
             <TextImage
               navigation={navigation}
               nameImage="food.png"
-              text="Chăm thú cưng"
+              text={txtFood6}
             />
             <TextImage
               navigation={navigation}
               nameImage="food.png"
-              text="Giao hoa"
+              text={txtFood7}
+            />
+            <TextImage
+              navigation={navigation}
+              nameImage="food.png"
+              text={txtFood8}
+            />
+          </View>
+          <View style={{ flexDirection: "row", marginTop: 12 }}>
+            <TextImage
+              navigation={navigation}
+              nameImage="food.png"
+              text={txtFood9}
+            />
+            <TextImage
+              navigation={navigation}
+              nameImage="food.png"
+              text={txtFood10}
+            />
+            <TextImage
+              navigation={navigation}
+              nameImage="food.png"
+              text={txtFood11}
             />
             <TextImage navigation={navigation} nameImage="" text="" />
           </View>
         </View>
       </View>
       <View style={{ marginBottom: 24 }}>
-        <Products title="thử quán mới" data={data1} />
-        <Products title="đang khuyến mãi" data={data2} />
-        <Products title="thương hiệu quen thuộc" data={data3} />
+        <Products title={txtCategory1} data={DataHome.data1} />
+        <Products title={txtCategory2} data={DataHome.data2} />
+        <Products title={txtCategory3} data={DataHome.data3} />
       </View>
     </ScrollView>
   );

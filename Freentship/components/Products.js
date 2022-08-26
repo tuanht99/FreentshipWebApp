@@ -1,5 +1,6 @@
 import { View, Text, Pressable, ScrollView, Image } from 'react-native';
 import Product from './Product';
+import ProductsTheme from '../themes/ProductsTheme';
 
 function Products(props) {
   const styles = {
@@ -7,11 +8,10 @@ function Products(props) {
     data2: { height: 140, width: 133, borderTopLeftRadius: 8, borderTopRightRadius: 8 },
     data3: { fontSize: 18, fontWeight: 'bold', marginTop: 8 },
   };
-
   return (
-    <View style={{ height: 304, backgroundColor: '#fefefe', marginVertical: 12, paddingHorizontal: 14, paddingBottom: 14 }} >
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 18 }}>
-        <Text style={{ fontSize: 16, textTransform: 'uppercase', fontWeight: 'bold' }} >
+    <View style={ProductsTheme.container} >
+      <View style={ProductsTheme.products1}>
+        <Text style={ProductsTheme.products2} >
           {props.title}
         </Text>
         <Pressable style={{ flexDirection: 'row' }} onPress={() => console.log('Xem tat ca: ', props.title)}>
@@ -23,8 +23,8 @@ function Products(props) {
           <Product key={index} nameImage={item.nameImage} text={item.text} numberAddress={item.numberAddress} discount={item.discount} style={styles} />
         ))}
         <View style={styles.data1}>
-          <View style={{ width: 133, flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text style={{ fontSize: 18, fontWeight: 'bold', color: "#E94730", textAlign: 'center' }}>xem tất cả Thử quán mới tại LOSHIP</Text>
+          <View style={ProductsTheme.products3}>
+            <Text style={ProductsTheme.products4}>xem tất cả Thử quán mới tại LOSHIP</Text>
             <Image source={require('../assets/next.png')} style={{ height: 20, width: 20 }} />
           </View>
         </View>
