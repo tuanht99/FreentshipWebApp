@@ -1,5 +1,6 @@
 import MainNavigator from './navigators/MainNavigator';
-import HomeNavigator from './navigators/HomeNavigator';
+import TryNewShopView from './views/TryNewShopView';
+import PromotionView from './views/PromotionView';
 
 export default function App() {
   return (

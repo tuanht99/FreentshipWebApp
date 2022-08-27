@@ -1,15 +1,15 @@
 import {
-  Text,
-  TextInput,
   View,
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import { MaterialIcons, Feather, Ionicons } from "react-native-vector-icons";
+import { Feather } from "react-native-vector-icons";
 import Products from "../components/Products";
 import Category1 from "../components/Category1";
 import { DataFood } from "../core/data";
 import FoodTheme from "../themes/FoodTheme";
+import Search from "../components/Search";
+import UserAddress from "../components/UserAddress";
 
 const txtSearch = 'Bạn thêm món gì?';
 const txtTitleAddress = 'Giao tới địa chỉ';
@@ -24,19 +24,9 @@ function FoodScreen({ navigation, route }) {
         <TouchableOpacity style={FoodTheme.food1} onPress={() => navigation.goBack()}>
           <Feather name="arrow-left" size={24} color="#0e0e0e" style={{ padding: 14 }} />
         </TouchableOpacity>
-        <View style={FoodTheme.food2}>
-          <Feather name="search" size={24} color="#0e0e0e" style={{ padding: 14 }} />
-          <TextInput placeholder={txtSearch} style={{ flex: 1 }} />
-        </View>
+        <Search textSearch={txtSearch} foodTheme={FoodTheme.food2} />
       </View>
-      <View style={FoodTheme.food3}>
-        <Text style={{ color: '#aaa' }}>{txtTitleAddress}</Text>
-        <View style={FoodTheme.food4}>
-          <Ionicons name="location" size={20} color="#E94730" style={{ marginHorizontal: 4 }} />
-          <Text style={{ color: '#0e0e0e' }}>53 đường võ văn ngân, linh chiểu, thủ đức, t...</Text>
-          <MaterialIcons name="navigate-next" size={20} color="#0e0e0e" />
-        </View>
-      </View>
+      <UserAddress theme={FoodTheme.food3} theme1={FoodTheme.food4} titleAddress={txtTitleAddress} />
       <View style={{ marginTop: 14, marginBottom: 24 }}>
         <Category1 title={txtCategory1} data={DataFood.data4} />
         <Products title={txtCategory2} data={DataFood.data5} />

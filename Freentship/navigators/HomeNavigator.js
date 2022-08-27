@@ -1,5 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeView from '../views/HomeView';
+import { Ionicons, Feather } from 'react-native-vector-icons';
 
 const HomeTab = createBottomTabNavigator();
 

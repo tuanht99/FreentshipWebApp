@@ -25,6 +25,7 @@ const txtFood8 = 'Mua thuốc';
 const txtFood9 = 'Shopping';
 const txtFood10 = 'Chăm thú cưng';
 const txtFood11 = 'Giao hoa';
+const TRYNEWSHOP = 'TryNewShop';
 
 export default function HomeView({ navigation }) {
   return (
@@ -162,7 +163,7 @@ export default function HomeView({ navigation }) {
         </View>
       </View>
       <View style={{ marginBottom: 24 }}>
-        <Products title={txtCategory1} data={DataHome.data1} />
+        <Products navigation={navigation} nameNavigation={TRYNEWSHOP} title={txtCategory1} data={DataHome.data1} />
         <Products title={txtCategory2} data={DataHome.data2} />
         <Products title={txtCategory3} data={DataHome.data3} />
       </View>

@@ -1,13 +1,14 @@
 import { View, TouchableOpacity, Text, Image } from "react-native";
 
 function TextImage(props) {
+  const screen = ["Food", "Grapber", "Market", "Delivery", "SuperMarket", "Cosmetics", "Laundry", "Medicine", "Shopping", "Pet", "Flower"];
   return (
     <View style={{ flex: 1 }}>
       {props.nameImage !== "" ? (
         <TouchableOpacity
           style={{ alignItems: "center" }}
           onPress={() =>
-            props.navigation.navigate("Food", { text: props.text })
+            props.navigation.navigate(screen[0], { text: props.text })
           }
         >
           <Image

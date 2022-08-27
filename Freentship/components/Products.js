@@ -14,13 +14,13 @@ function Products(props) {
         <Text style={ProductsTheme.products2} >
           {props.title}
         </Text>
-        <Pressable style={{ flexDirection: 'row' }} onPress={() => console.log('Xem tat ca: ', props.title)}>
+        <Pressable style={{ flexDirection: 'row' }} onPress={() => props.navigation.navigate(props.nameNavigation)}>
           <Text style={{ color: '#00A3FF', fontSize: 14 }}>Xem tất cả</Text>
         </Pressable>
       </View>
       <ScrollView horizontal={true} contentContainerStyle={{ marginTop: 25, marginStart: -14 }}>
         {props.data.map((item, index) => (
-          <Product key={index} nameImage={item.nameImage} text={item.text} numberAddress={item.numberAddress} discount={item.discount} style={styles} />
+          <Product key={index} nameImage={item.nameImage} text={item.text} numberAddress={item.numberAddress} discount={item.discount} style={styles} isButton={item.isButton} />
         ))}
         <View style={styles.data1}>
           <View style={ProductsTheme.products3}>
