@@ -4,7 +4,6 @@ import React from 'react'
 import AppStyle from '../themes/NotifyTheme'
 
 
-
 export default function NotifyView() {
   return (
     <View style={AppStyle.view}>
@@ -79,11 +78,7 @@ export default function NotifyView() {
         </ScrollView>
       </View>
 
-      <View style={AppStyle.viewNagivator}>
-        {/* chứa gắn navigation của home */}
-        <Button
-          title="Press button"></Button>
-      </View>
+      
     </View>
   );
 }

@@ -19,7 +19,7 @@ const Styles_Nottifys = StyleSheet.create({
      paddingTop: 30,
     },
     Menu: {
-      paddingTop: 50,
+      paddingTop: 20,
       paddingBottom: 50,
       paddingLeft: 75,
     },
@@ -36,7 +36,7 @@ const Styles_Nottifys = StyleSheet.create({
       flexDirection: 'row',
       height: '100%',
       width: '100%',
-      paddingBottom: 20,
+      paddingTop: 10,
   
     },
     viewScroll: {
