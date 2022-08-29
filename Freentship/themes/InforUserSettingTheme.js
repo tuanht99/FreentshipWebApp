@@ -65,6 +65,7 @@ const InforSettingView = StyleSheet.create({
       height: 80, width: 80,
       resizeMode: "contain",
       borderRadius: 50,
+      
     },
     profileText: {
       fontSize: 20,

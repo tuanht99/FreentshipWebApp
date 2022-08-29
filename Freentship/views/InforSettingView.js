@@ -1,7 +1,8 @@
-import { Text, View, Image, TouchableOpacity, } from 'react-native'
+import { Text, View, Image, TouchableOpacity, Icon } from 'react-native'
 import React from 'react'
 // list dữ liệu
 import Avatar from '../assets/gaubeo.jpg';
+import { Ionicons } from '@expo/vector-icons';
 // list
 const PROFICLE = [{
   key: 1,
@@ -19,6 +20,7 @@ export default function InforSettingView() {
       <View style={AppStyle.navigators}>
         <TouchableOpacity>
           <Image style={AppStyle.Image} source={require('../assets/arrow-left.png')}></Image>
+
         </TouchableOpacity>
         <Text style={AppStyle.navigatorsText}>
           Quản Lí Hồ Sơ
@@ -29,8 +31,10 @@ export default function InforSettingView() {
         <TouchableOpacity>
           {PROFICLE.map((user) => (
             <View style={""}>
-              <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
+              <View style={{ position:'relative' ,justifyContent: 'center', alignItems: 'center' }}>
                 <Image style={AppStyle.avatarchange} source={user.image} />
+                <Ionicons  style={{position:'absolute',left: 200, bottom:-15,}} name="md-camera-reverse-sharp" size={35} color="black" />
+
               </View>
 
               <View style={{ flexDirection: 'column', flex: 4 }}>
@@ -52,6 +56,7 @@ export default function InforSettingView() {
           ))}
         </TouchableOpacity>
       </View>
+
       {/* Profile */}
       <View style={AppStyle.Profile}>
         {/* nút thay đổi */}
@@ -67,6 +72,7 @@ export default function InforSettingView() {
         <View >
           <View style={{ flexDirection: 'row', }} >
             <Image style={AppStyle.Image} source={require('../assets/usericon.jpg')}></Image>
+
             <Text style={AppStyle.profileText} >thanh trần nhật</Text>
           </View>
           <View style={{ flexDirection: 'row', }} >
@@ -80,10 +86,6 @@ export default function InforSettingView() {
 
 
         </View>
-
-
-
-
       </View>
       {/* phone */}
       <View style={AppStyle.Phone}>
@@ -105,7 +107,7 @@ export default function InforSettingView() {
       </View>
       {/* change password */}
       <View style={AppStyle.ChangePassword}>
-        <View style={{ flexDirection: 'row', }} >
+        <View style={{ flexDirection: 'row' }} >
           <Image style={AppStyle.Image} source={require('../assets/padlock.png')}></Image>
 
           <Text style={AppStyle.profileText}>
