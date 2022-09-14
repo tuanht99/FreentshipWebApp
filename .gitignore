@@ -12,5 +12,6 @@
 package-lock.json
 /Freentship/yarn.lock
 # macOS
+.DS_Store
 /Freentship/.DS_Store
 /Freentship/.expo-shared
