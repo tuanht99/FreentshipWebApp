@@ -1,31 +1,25 @@
-import {
-  Text,
-  View,
-  ScrollView,
-  ImageBackground,
-  Image,
-} from "react-native";
-import { MaterialIcons, Ionicons } from "react-native-vector-icons";
+import { Image, ImageBackground, ScrollView, Text, View } from "react-native";
+import { Ionicons, MaterialIcons } from "react-native-vector-icons";
 import TextImage from "../components/TextImage";
 import Products from "../components/Products";
 import { DataHome } from "../core/data";
 import HomeTheme from "../themes/HomeTheme";
 
-const txtCategory1 = 'thử quán mới';
-const txtCategory2 = 'đang khuyến mãi';
-const txtCategory3 = 'thương hiệu quen thuộc';
-const txtFood1 = 'Giao đồ ăn';
-const txtFood2 = 'Gọi xe';
-const txtFood3 = 'Đi chợ';
-const txtFood4 = 'Giao hàng';
-const txtFood5 = 'Siêu thị LoX';
-const txtFood6 = 'Mua mỹ phẩm';
-const txtFood7 = 'Giặt ủi';
-const txtFood8 = 'Mua thuốc';
-const txtFood9 = 'Shopping';
-const txtFood10 = 'Chăm thú cưng';
-const txtFood11 = 'Giao hoa';
-const TRYNEWSHOP = 'TryNewShop';
+const txtCategory1 = "thử quán mới";
+const txtCategory2 = "đang khuyến mãi";
+const txtCategory3 = "thương hiệu quen thuộc";
+const txtFood1 = "Giao đồ ăn";
+const txtFood2 = "Gọi xe";
+const txtFood3 = "Đi chợ";
+const txtFood4 = "Giao hàng";
+const txtFood5 = "Siêu thị LoX";
+const txtFood6 = "Mua mỹ phẩm";
+const txtFood7 = "Giặt ủi";
+const txtFood8 = "Mua thuốc";
+const txtFood9 = "Shopping";
+const txtFood10 = "Chăm thú cưng";
+const txtFood11 = "Giao hoa";
+const TRYNEWSHOP = "TryNewShop";
 
 export default function HomeView({ navigation }) {
   return (
@@ -163,7 +157,12 @@ export default function HomeView({ navigation }) {
         </View>
       </View>
       <View style={{ marginBottom: 24 }}>
-        <Products navigation={navigation} nameNavigation={TRYNEWSHOP} title={txtCategory1} data={DataHome.data1} />
+        <Products
+          navigation={navigation}
+          nameNavigation={TRYNEWSHOP}
+          title={txtCategory1}
+          data={DataHome.data1}
+        />
         <Products title={txtCategory2} data={DataHome.data2} />
         <Products title={txtCategory3} data={DataHome.data3} />
       </View>

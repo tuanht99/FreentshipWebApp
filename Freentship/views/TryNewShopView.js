@@ -7,7 +7,6 @@ import { DataTryNewShop } from '../core/data';
 import Product1 from '../components/Product1';
 
 export default function TryNewShopView({ navigation, route }) {
-
   const txtSearch = 'Bạn thêm món gì?';
   const txtTitleAddress = 'Giao tới địa chỉ';
 

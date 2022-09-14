@@ -183,62 +183,28 @@ export const DataTryNewShop = [
   {
     numberAddress: "1.5",
     text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
+    text2: "cửa hàng chu đáo",
+    category: ["status", "partner", "discount"],
+    discount: { list: 1, number: 10 },
   },
   {
     numberAddress: "2.5",
     text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
+    text2: "cửa hàng chu đáo",
+    category: ["discount"],
+    discount: { list: 1, number: 10 },
   },
   {
     numberAddress: "3.5",
     text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
+    text2: "cửa hàng chu đáo",
+    category: ["status"],
   },
   {
     numberAddress: "4.5",
     text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
-  },
-  {
-    numberAddress: "5.5",
-    text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
-  },
-  {
-    numberAddress: "6.5",
-    text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
-  },
-  {
-    numberAddress: "7.5",
-    text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
-  },
-  {
-    numberAddress: "8.5",
-    text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
-  },
-  {
-    numberAddress: "9.5",
-    text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
-  },
-  {
-    numberAddress: "10.5",
-    text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
-  },
-  {
-    numberAddress: "22.5",
-    text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
-  },
-  {
-    numberAddress: "2.25",
-    text1: "Đối tác Loship",
-    text2: "cửa hàng chu đáo"
+    text2: "cửa hàng chu đáo",
+    category: ["partner"],
   },
 ]
 

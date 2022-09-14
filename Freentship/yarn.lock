@@ -10056,7 +10056,7 @@ react-dev-utils@~11.0.1:
 
 react-devtools-core@4.24.0:
   version "4.24.0"
-  resolved "https://registry.npmjs.org/react-devtools-core/-/react-devtools-core-4.24.0.tgz"
+  resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.24.0.tgz#7daa196bdc64f3626b3f54f2ff2b96f7c4fdf017"
   integrity sha512-Rw7FzYOOzcfyUPaAm9P3g0tFdGqGq2LLiAI+wjYcp6CsF3DeeMrRS3HZAho4s273C29G/DJhx0e8BpRE/QZNGg==
   dependencies:
     shell-quote "^1.6.1"
@@ -10141,10 +10141,10 @@ react-native-keyboard-aware-scroll-view@^0.9.5:
     prop-types "^15.6.2"
     react-native-iphone-x-helper "^1.0.3"
 
-react-native-paper@^4.12.4:
-  version "4.12.4"
-  resolved "https://registry.npmjs.org/react-native-paper/-/react-native-paper-4.12.4.tgz"
-  integrity sha512-NMfLSIN0Ql/KCTSimhgzbEOgz371dqDAgChnp2VE4H7n1B0Pwy0bzPKmY/T8trVvEdmJRXrbXAusaFq8elDXNg==
+react-native-paper@^5.0.0-rc.4:
+  version "5.0.0-rc.4"
+  resolved "https://registry.npmjs.org/react-native-paper/-/react-native-paper-5.0.0-rc.4.tgz"
+  integrity sha512-BZHa9i/xGnxCuxve6LYtPGYM23R7oMOiMt4hy+Yb620aqbQHhVUnrQB67tIJn1vcwy7DleYWn4mCaJLa0agpLQ==
   dependencies:
     "@callstack/react-theme-provider" "^3.0.7"
     color "^3.1.2"
@@ -10174,7 +10174,7 @@ react-native-screens@~3.15.0:
 
 react-native-svg@12.3.0:
   version "12.3.0"
-  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-12.3.0.tgz#40f657c5d1ee366df23f3ec8dae76fd276b86248"
+  resolved "https://registry.npmjs.org/react-native-svg/-/react-native-svg-12.3.0.tgz"
   integrity sha512-ESG1g1j7/WLD7X3XRFTQHVv0r6DpbHNNcdusngAODIxG88wpTWUZkhcM3A2HJTb+BbXTFDamHv7FwtRKWQ/ALg==
   dependencies:
     css-select "^4.2.1"
