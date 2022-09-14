@@ -1,9 +1,6 @@
-import TryNewShopView from "./views/TryNewShopView";
-import MainNavigator from "./navigators/MainNavigator";
+import React from "react";
 import PromotionView from "./views/PromotionView";
 
 export default function App() {
-  return (
-    <PromotionView />
-  );
+  return <PromotionView />;
 }
