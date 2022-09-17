@@ -1,12 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  Modal,
-  ScrollView,
-  Switch,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Modal, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import TryNewShopTheme from "../themes/TryNewShopTheme";
 import Feather from "react-native-vector-icons/Feather";
 import Search from "../components/Search";
@@ -17,7 +10,6 @@ import { DataPromotion } from "../core/data";
 import { db } from "../core/config";
 import {
   collection,
-  onSnapshot,
   query,
   limit,
   where,
