@@ -1,3 +1,4 @@
+import React from "react";
 import { Image, ImageBackground, ScrollView, Text, View } from "react-native";
 import { Ionicons, MaterialIcons } from "react-native-vector-icons";
 import TextImage from "../components/TextImage";
@@ -29,12 +30,8 @@ export default function HomeView({ navigation }) {
           source={require("../assets/backgroundHome.png")}
           style={{ height: 130 }}
         >
-          <View
-            style={HomeTheme.home1}
-          >
-            <View
-              style={HomeTheme.home2}
-            >
+          <View style={HomeTheme.home1}>
+            <View style={HomeTheme.home2}>
               <Ionicons
                 name="location"
                 size={24}
@@ -49,9 +46,7 @@ export default function HomeView({ navigation }) {
           </View>
         </ImageBackground>
       </View>
-      <View
-        style={HomeTheme.home3}
-      >
+      <View style={HomeTheme.home3}>
         <View
           style={{
             flexDirection: "row",

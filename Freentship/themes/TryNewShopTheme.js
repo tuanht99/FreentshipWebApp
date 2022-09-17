@@ -1,43 +1,43 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#cecece',
+    backgroundColor: "#cecece",
     paddingTop: 40,
   },
   search: {
     paddingHorizontal: 14,
-    backgroundColor: '#fefefe'
+    backgroundColor: "#fefefe",
   },
   buttomBack: {
     width: 52,
     transform: [{ translateX: -14 }],
-    backgroundColor: 'red'
+    backgroundColor: "red",
   },
   cmSearch: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginVertical: 14,
-    alignItems: 'center',
+    alignItems: "center",
     borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 5
+    borderColor: "#ccc",
+    borderRadius: 5,
   },
   cmUserAddress: {
-    backgroundColor: '#fefefe',
+    backgroundColor: "#fefefe",
     padding: 14,
-    marginTop: 14
+    marginTop: 78,
   },
   cmUserAddress1: {
     marginVertical: 12,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center'
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   category: {
     flex: 1,
     paddingTop: 14,
     marginVertical: 14,
-    backgroundColor: '#fefefe',
-  }
+    backgroundColor: "#fefefe",
+  },
 });
