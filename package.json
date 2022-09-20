@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "react-native-calendars": "^1.1289.0"
+  }
+}

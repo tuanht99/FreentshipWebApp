@@ -50,10 +50,11 @@ const InforSettingView = StyleSheet.create({
       backgroundColor: 'white',
     },
     navigatorsText: {
-      paddingLeft: 50,
+      left: 55,
       alignItems: 'center',
       justifyContent: 'center',
       fontSize: 30,
+      alignContent: 'center',
   
     },
     Image: {
@@ -79,7 +80,7 @@ const InforSettingView = StyleSheet.create({
       color: 'blue',
     },
     touchableOpacityChangePassword: {
-      paddingLeft: 150,
+      alignItems: 'center',
     },
     Phone: {
       flex: 2,
