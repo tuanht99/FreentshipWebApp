@@ -191,7 +191,7 @@ export default function BooksListApp({ navigation }) {
       data={DATA} keyExtractor={item => item.id}
       renderItem={({ item }) => (
 
-        <TouchableOpacity style={AppStyle.InforUserTheme.htrOrder} onPress={() => navigation.navigate('Store')}>
+        <TouchableOpacity style={AppStyle.InforUserTheme.htrOrder} onPress={() => navigation.navigate('OrderHistoryView')}>
           <View style={{
             flex: 2, justifyContent: "center",
             alignItems: "center",
